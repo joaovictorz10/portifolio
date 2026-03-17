@@ -36,7 +36,7 @@
 ## 🔗 Links Principais
 
 * 🎨 **Protótipo no Figma:** [Acessar Design do Portfólio](https://www.figma.com/site/5uJwViQDZvkjFkw1QgB3hw/portifolio?node-id=0-1&t=inUnvzpmFWvPnJtW-1)
-* 🌐 **Site Publicado (Produção):** [Link do Portfólio](https://devprofile-blond.vercel.app/)
+* 🌐 **Site Publicado (Produção):** [Link do Portfólio](https://portifolio-m8ow.vercel.app/)
 
 ---
 
