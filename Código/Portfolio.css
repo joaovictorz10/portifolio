@@ -114,6 +114,7 @@ body.loading-state .header,
 body.loading-state .hacks-section,
 body.loading-state .about-section,
 body.loading-state .services-section,
+body.loading-state .books-section,
 body.loading-state .certs-section,
 body.loading-state .contact-section,
 body.loading-state .footer {
@@ -3767,4 +3768,88 @@ body.loading-state .hero-container {
     background: var(--secondary);
     color: var(--bg-dark);
     transform: translateY(-2px);
+}
+/* Books Section */
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 160px));
+    justify-content: flex-start;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .books-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 180px));
+        gap: 2rem;
+    }
+}
+
+.book-card {
+    border-radius: 12px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.book-cover-container {
+    width: 100%;
+    aspect-ratio: 2/3;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    background: #1e1e1e;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.book-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.book-badge-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    background: rgba(30, 30, 40, 0.85);
+    color: var(--accent);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.85rem;
+}
+
+
+
+.book-info-clean {
+    width: 100%;
+    padding: 0 4px;
+}
+
+.book-title-clean {
+    font-size: 0.95rem;
+    color: var(--primary);
+    margin-bottom: 0.3rem;
+    font-weight: 700;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.book-author-clean {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-family: var(--font-code);
 }

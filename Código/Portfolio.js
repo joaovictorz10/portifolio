@@ -656,6 +656,7 @@ function initLanguage() {
         { pt: "Projetos", en: "Projects" },
         { pt: "Sobre", en: "About" },
         { pt: "Feedbacks", en: "Feedbacks" },
+        { pt: "Livros", en: "Books" },
         { pt: "Certificações", en: "Certifications" },
         { pt: "Contato", en: "Contact" },
         { pt: "Idioma", en: "Language" },
@@ -687,6 +688,10 @@ function initLanguage() {
         // --- PROJETOS & MODAL ---
         { pt: "Sistema web desenvolvido para otimizar a gestão de clientes, veículos e ordens de serviço da oficina Japan Motors.", en: "Web system developed to optimize the management of clients, vehicles, and service orders for the Japan Motors workshop." },
         { pt: "Plataforma web que gerencia pacientes, consultas e processos internos com dashboards interativos e automação de tarefas.", en: "Web platform that manages patients, appointments, and internal processes featuring interactive dashboards and task automation." },
+
+        // --- LIVROS ---
+        { pt: "Engenharia de Software", en: "Software Engineering" },
+        { pt: "Engenharia de Software Moderna", en: "Modern Software Engineering" },
 
         // --- SOBRE & APRENDIZADO CONTÍNUO ---
         { pt: "Aprendizado Contínuo", en: "Continuous Learning" },
@@ -736,7 +741,7 @@ function initLanguage() {
         { pt: "[SUCESSO] Sistema pronto. Iniciando aplicação.", en: "[SUCCESS] System ready. Launching application." },
 
         // --- FOOTER ---
-        { pt: "© 2026 Portfolio - Exemplo.", en: "© 2026 Portfolio - Example." }
+        { pt: "© 2026 - João Victor. - Todos os direitos reservados.", en: "© 2026 - João Victor. - All rights reserved." }
     ];
 
     let currentLang = localStorage.getItem('lang') || 'en';
