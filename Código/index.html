@@ -1,0 +1,619 @@
+﻿<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>My Portfolio - Template</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&family=Fira+Code:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="Portfolio.css">
+</head>
+
+<body class="loading-state">
+
+    <div class="loader-screen" id="loader">
+        <div class="loader-container">
+            <div class="hack-terminal">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="terminal-title">C:\Windows\System32\cmd.exe</div>
+                </div>
+                <div class="terminal-body" id="cmdTerminal" style="height: 350px; overflow-y: hidden;">
+                    <!-- Terminal messages will be dynamically injected here via JS -->
+                </div>
+            </div>
+            <div class="hack-lines">
+                <div class="hack-line"></div>
+                <div class="hack-line"></div>
+                <div class="hack-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header" id="header">
+        <div class="header-container">
+            <nav class="nav">
+                <a href="#home" class="nav-brand">
+                    <div class="brand-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <span class="brand-text">João Victor</span>
+                </a>
+                <div class="nav-menu" id="navMenu">
+                    <a href="#home" class="nav-link active" data-section="home">
+                        <span class="nav-text">Home</span>
+                    </a>
+                    <a href="#hacks" class="nav-link" data-section="hacks">
+                        <span class="nav-text">Projects</span>
+                    </a>
+                    <a href="#about" class="nav-link" data-section="about">
+                        <span class="nav-text">About</span>
+                    </a>
+                    <a href="#services" class="nav-link" data-section="services">
+                        <span class="nav-text">Feedbacks</span>
+                    </a>
+                    <a href="#certifications" class="nav-link" data-section="certifications">
+                        <span class="nav-text">Certifications</span>
+                    </a>
+                    <a href="#contact" class="nav-link" data-section="contact">
+                        <span class="nav-text">Contact</span>
+                    </a>
+                </div>
+                <div class="nav-actions">
+                    <button class="dir-toggle" id="dirToggle" title="Toggle Direction">
+                        <i class="fas fa-exchange-alt"></i>
+                        <span class="dir-text">Language</span>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <section id="home" class="section hero">
+            <div class="hero-bg">
+                <canvas id="matrixCanvas"></canvas>
+                <div class="grid-overlay"></div>
+                <div class="scan-line"></div>
+                <div class="hack-particles" id="hackParticles"></div>
+            </div>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <div class="badge-pulse"></div>
+                        <i class="fas fa-code"></i>
+                        <span> Full-Stack Developer</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="title-word" data-word="BEM VINDO">BEM VINDO</span>
+                        <span class="title-word highlight" data-word="AO MEU">AO MEU</span>
+                        <span class="title-word" data-word="PORTIFOLIO">PORTIFOLIO</span>
+                    </h1>
+                    <div class="hero-subtitle">
+                        <span class="subtitle-text">Full-Stack Development</span>
+                        <span class="subtitle-separator">|</span>
+                        <span class="subtitle-text">API Design</span>
+                        <span class="subtitle-separator">|</span>
+                        <span class="subtitle-text">Software Architecture</span>
+                    </div>
+                    <p class="hero-description">
+                        Engenheiro de Software focado na construção de arquiteturas robustas e aplicações web de alto
+                        desempenho, desde a infraestrutura de backend até interfaces dinâmicas e responsivas.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number" data-count="3">0</div>
+                                <div class="stat-label">Projetos</div>
+                            </div>
+                            <div class="stat-glow"></div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number" data-count="2">0</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                            <div class="stat-glow"></div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number" data-count="2">0</div>
+                                <div class="stat-label">Certifications</div>
+                            </div>
+                            <div class="stat-glow"></div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number" data-count="8">0</div>
+                                <div class="stat-label">Recomendações</div>
+                            </div>
+                            <div class="stat-glow"></div>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <span>Entre em contato</span>
+                            <i class="fas fa-paper-plane"></i>
+                            <div class="btn-shine"></div>
+                        </a>
+                        <a href="img/João Victor - currículo.pdf" download="João Victor - currículo.pdf"
+                            class="btn btn-secondary">
+                            <span>Download Resume</span>
+                            <i class="fas fa-file-download"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="security-monitor expanded">
+                        <div class="monitor-frame">
+                            <div class="monitor-screen">
+                                <div class="screen-content">
+                                    <div class="screen-header">
+                                        <div class="screen-dots">
+                                            <span class="red"></span>
+                                            <span class="yellow"></span>
+                                            <span class="green"></span>
+                                        </div>
+                                        <div class="screen-title">COMMAND CENTER - JOÃO VICTOR</div>
+                                        <div class="screen-status">SYSTEMS: <span class="online">ONLINE</span></div>
+                                    </div>
+                                    <div class="screen-body metrics-grid">
+
+                                        <div class="metric-group">
+                                            <h4 class="metric-title"><i class="fas fa-history"></i> Coding Activity
+                                                (WakaTime)</h4>
+                                            <img src="https://meuportifolio-ashy.vercel.app/api/wakatime?username=joaovictorz10&custom_title=Tempo+de+Código&card_width=466&layout=compact&display_format=time&theme=dark&v=4"
+                                                class="waka-img" alt="WakaTime">
+                                            <img src="https://meuportifolio-ashy.vercel.app/api/wakatime?username=joaovictorz10&custom_title=Linguagens&card_width=466&layout=default&display_format=time&theme=dark&v=4"
+                                                class="waka-img" alt="WakaTime Langs">
+                                        </div>
+
+                                        <div class="metric-group">
+                                            <h4 class="metric-title"><i class="fab fa-github"></i> GitHub Overview</h4>
+                                            <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=joaovictorz10&theme=github_dark"
+                                                class="waka-img" alt="Profile Details">
+                                            <img src="https://github-streak-stats-ruby.vercel.app/?user=joaovictorz10&theme=dark&hide_border=true&locale=pt_BR"
+                                                class="waka-img" alt="GitHub Streak">
+                                        </div>
+
+                                        <div class="metric-group full-width">
+                                            <h4 class="metric-title"><i class="fas fa-snake"></i> Contribution Grid</h4>
+                                            <div class="flex-row">
+                                                <img src="https://meuportifolio-ashy.vercel.app/api/top-langs?username=joaovictorz10&layout=pie&theme=dark&hide_border=true&card_width=300&v=3"
+                                                    class="waka-img compact" alt="Top Langs">
+                                                <img src="https://joaopauloaramuni.github.io/image/github-user-contribution.svg"
+                                                    class="waka-img snake" alt="Snake Game">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="monitor-stand"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        </section>
+
+        <section id="hacks" class="section hacks-section">
+            <div class="section-bg">
+                <div class="section-pattern"></div>
+            </div>
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">00</span>
+                    <h2 class="section-title">
+                        <span class="title-text">Projects</span>
+                        <span class="title-underline"></span>
+                    </h2>
+                </div>
+                <div class="hacks-slider">
+                    <div class="slider-main-container">
+                        <div class="slider-viewport">
+                            <div class="slider-track" id="sliderTrack">
+                                <div class="slider-slide active">
+                                    <div class="slide-card project-card" data-title="Japan Motors" data-github="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-2-ti3-9545100-Oficina-Mecanica">
+                                        <img src="img/japan.png" alt="Project Cover" class="slide-cover-img">
+
+                                        <div class="slide-overlay"></div>
+
+                                        <div class="slide-content-wrapper">
+                                            <h3 class="slide-title">Japan Motors</h3>
+                                            <p class="slide-description" style="color: #ffffff;">Sistema web
+                                                desenvolvido para otimizar a gestão de clientes, veículos e ordens de
+                                                serviço da oficina Japan Motors.</p>
+                                            <div class="slide-metrics" style="margin-top: 15px;">
+                                                <div class="metric-item">
+                                                    <span class="tech-tag"
+                                                        style="font-size: 0.85rem; color: #ffffff;">HTML • Spring Boot •
+                                                        MySQL • Sistema Web • Java</span>
+                                                </div>
+                                            </div>
+                                            <a href="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-2-ti3-9545100-Oficina-Mecanica" target="_blank" onclick="event.stopPropagation()" class="btn btn-secondary" style="margin-top: 20px; padding: 0.5rem 1rem; width: max-content; display: inline-flex; align-items: center; gap: 8px; z-index: 10; position: relative;">
+                                                <i class="fab fa-github"></i>
+                                                <span>GitHub</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-slide">
+                                    <div class="slide-card project-card" data-title="Amavi" data-github="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2026-1-ti4-3126100-amavi-nutricao/tree/main">
+                                        <img src="img/amavi.png" alt="Project Cover" class="slide-cover-img">
+
+                                        <div class="slide-overlay"></div>
+
+                                        <div class="slide-content-wrapper">
+                                            <h3 class="slide-title">Amavi</h3>
+                                            <p class="slide-description" style="color: #ffffff;">Plataforma web que
+                                                gerencia pacientes, consultas e processos internos com dashboards
+                                                interativos e automação de tarefas.</p>
+                                            <div class="slide-metrics" style="margin-top: 15px;">
+                                                <div class="metric-item">
+                                                    <span class="tech-tag"
+                                                        style="font-size: 0.85rem; color: #ffffff;">React • Java •
+                                                        Spring Boot • MySQL • REST API</span>
+                                                </div>
+                                            </div>
+                                            <a href="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2026-1-ti4-3126100-amavi-nutricao/tree/main" target="_blank" onclick="event.stopPropagation()" class="btn btn-secondary" style="margin-top: 20px; padding: 0.5rem 1rem; width: max-content; display: inline-flex; align-items: center; gap: 8px; z-index: 10; position: relative;">
+                                                <i class="fab fa-github"></i>
+                                                <span>GitHub</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="slider-controls">
+                            <button class="slider-nav-btn prev-btn" id="prevBtn">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <div class="slider-indicators" id="sliderIndicators"></div>
+                            <button class="slider-nav-btn next-btn" id="nextBtn">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        <div class="slider-footer">
+                            <div class="slider-counter">
+                                <span class="current-slide" id="currentSlide">01</span>
+                                <span class="slide-separator">/</span>
+                                <span class="total-slides" id="totalSlides">02</span>
+                            </div>
+                            <div class="slider-progress-wrapper">
+                                <div class="slider-progress-bar">
+                                    <div class="slider-progress-fill" id="sliderProgress"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section about-section">
+            <div class="section-bg">
+                <div class="section-pattern"></div>
+            </div>
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">01</span>
+                    <h2 class="section-title">
+                        <span class="title-text">About</span>
+                        <span class="title-underline"></span>
+                    </h2>
+                </div>
+                <div class="about-wrapper">
+                    <div class="about-intro-section">
+                        <div class="about-badge">
+                            <i class="fas fa-shield-check"></i>
+                            <span>Estudante de Engenharia de Software</span>
+                        </div>
+                        <p class="about-text">
+                            Com mais de 2 anos de experiência no desenvolvimento web, trabalho com tecnologias modernas
+                            como React, Next.js, Node.js e TypeScript. Meu objetivo é construir aplicações que resolvam
+                            problemas reais com código limpo e interfaces intuitivas.
+
+                            Quando não estou programando, você me encontra estudando novas tecnologias, contribuindo
+                            para projetos open source ou jogando videogames.
+                        </p>
+                    </div>
+                    <div class="about-grid">
+                        <div class="about-content">
+                            <div class="about-features">
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-database"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h3 class="feature-title">Backend & Data</h3>
+                                        <p class="feature-desc">Modelagem de dados com SQL e implementação de lógicas de
+                                            negócio complexas.</p>
+                                    </div>
+                                </div>
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h3 class="feature-title">Aprendizado Contínuo</h3>
+                                        <p class="feature-desc">Focado em arquitetura de software e expansão
+                                            internacional através com o domínio do inglês e a exploração contínua de
+                                            novas tecnologias.</p>
+                                    </div>
+                                </div>
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h3 class="feature-title">Full Stack</h3>
+                                        <p class="feature-desc">Experiência com Spring Boot (Java)
+                                            e Python para aplicações robustas.</p>
+                                    </div>
+                                </div>
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h3 class="feature-title">Mobile & Desktop</h3>
+                                        <p class="feature-desc">Desenvolvimento multiplataforma explorando tecnologias
+                                            como linguagem C para alta performance.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-visual">
+                            <div class="security-terminal">
+                                <div class="terminal-header">
+                                    <div class="terminal-dots">
+                                        <span class="dot red"></span>
+                                        <span class="dot yellow"></span>
+                                        <span class="dot green"></span>
+                                    </div>
+                                    <div class="terminal-title">terminal</div>
+                                </div>
+                                <div class="terminal-body">
+                                    <div class="terminal-line">
+                                        <span class="prompt">PS C:\Users\joao\my-portfolio&gt;</span>
+                                        <span class="command">git status</span>
+                                    </div>
+                                    <div class="terminal-line">
+                                        <span class="output">On branch main</span>
+                                    </div>
+                                    <div class="terminal-line">
+                                        <span class="output">Your branch is up to date with 'origin/main'.</span>
+                                    </div>
+                                    <div class="terminal-line">
+                                        <span class="output">&nbsp;</span>
+                                    </div>
+                                    <div class="terminal-line">
+                                        <span class="prompt">PS C:\Users\joao\my-portfolio&gt;</span>
+                                        <span class="command">python -m venv venv</span>
+                                    </div>
+                                    <div class="terminal-line">
+                                        <span class="prompt">PS C:\Users\joao\my-portfolio&gt;</span>
+                                        <span class="command">.\venv\Scripts\Activate.ps1</span>
+                                    </div>
+                                    <div class="terminal-line">
+                                        <span class="output">(venv) Ambiente virtual ativado com sucesso.</span>
+                                    </div>
+                                    <div class="terminal-line">
+                                        <span class="prompt">(venv) PS C:\Users\joao\my-portfolio&gt;</span>
+                                        <span class="cursor">_</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section id="services" class="section services-section">
+            <div class="section-bg">
+                <div class="section-pattern"></div>
+            </div>
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">02</span>
+                    <h2 class="section-title">
+                        <span class="title-text">Feedbacks</span>
+                        <span class="title-underline"></span>
+                    </h2>
+                </div>
+                <div class="feedback-container">
+                    <div class="service-card feedback-card">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-comment-alt"></i>
+                                <div class="icon-glow"></div>
+                            </div>
+                        </div>
+                        <h3 class="service-title feedback-heading">Deixe seu feedback</h3>
+                        <form id="feedbackForm" class="feedback-form">
+                            <div class="form-group">
+                                <label for="feedbackName">Nome</label>
+                                <input type="text" id="feedbackName" required placeholder="Seu nome">
+                            </div>
+                            <div class="form-group">
+                                <label for="feedbackMessage">Mensagem</label>
+                                <textarea id="feedbackMessage" required placeholder="Sua mensagem"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
+                    </div>
+                    <div id="feedbackList" class="feedback-list"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="section certs-section">
+            <div class="section-bg">
+                <div class="section-pattern"></div>
+            </div>
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">03</span>
+                    <h2 class="section-title">
+                        <span class="title-text">Certifications</span>
+                        <span class="title-underline"></span>
+                    </h2>
+                </div>
+                <div class="certs-grid">
+                    <div class="cert-card">
+                        <div class="cert-badge">
+                            <i class="fab fa-redhat"></i>
+                            <div class="badge-pulse"></div>
+                        </div>
+                        <h3 class="cert-title">Red Hat Academy</h3>
+                        <p class="cert-name">Red Hat System Administration I</p>
+                        <p class="cert-org"> (RH124- RHA) - Ver. 9.3</p>
+                        <div class="cert-year">2025</div>
+                        <div class="cert-glow"></div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="section-bg">
+                <div class="section-pattern"></div>
+            </div>
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-number">04</span>
+                    <h2 class="section-title">
+                        <span class="title-text">Contact</span>
+                        <span class="title-underline"></span>
+                    </h2>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                                <div class="icon-pulse"></div>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <a>devjoaovictor9@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                                <div class="icon-pulse"></div>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Telefone</h4>
+                                <a>+55 31 98416-2503</a>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="icon-pulse"></div>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Localização</h4>
+                                <span>Belo Horizonte - MG</span>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label class="form-label">Name</label>
+                            <input type="text" id="nome" name="from_name" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" id="email" name="reply_to" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Subject</label>
+                            <input type="text" id="assunto" name="subject" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Message</label>
+                            <textarea id="mensagem" name="message" class="form-input form-textarea" rows="5"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                            <div class="btn-shine"></div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    © 2026 - João Victor.
+                </p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/joaovictorz10" class="social-link"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script type="module" src="Portfolio.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "IRGsvvKqIVAGvmsZM", 
+            });
+        })();
+    </script>
+
+
+</body>
+
+</html>
