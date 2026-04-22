@@ -688,6 +688,7 @@ function initLanguage() {
         // --- PROJETOS & MODAL ---
         { pt: "Sistema web desenvolvido para otimizar a gestão de clientes, veículos e ordens de serviço da oficina Japan Motors.", en: "Web system developed to optimize the management of clients, vehicles, and service orders for the Japan Motors workshop." },
         { pt: "Plataforma web que gerencia pacientes, consultas e processos internos com dashboards interativos e automação de tarefas.", en: "Web platform that manages patients, appointments, and internal processes featuring interactive dashboards and task automation." },
+        { pt: "Plataforma completa para gerenciamento de aluguel de veículos de alto padrão com foco em experiência e organização do processo.", en: "Complete platform for managing high-end vehicle rentals with a focus on experience and process organization." },
 
         // --- LIVROS ---
         { pt: "Engenharia de Software", en: "Software Engineering" },
